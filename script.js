@@ -7,19 +7,13 @@ console.log(stringArray);
 let myObj = {}
 
 for (let i=0; i<stringArray.length; i++){
-    if (stringArray[i] === 'hi'){
-        myObj['hi'] = 3;
+    if (!myObj[stringArray[i]]){
         
-    } else if (stringArray[i] === 'hello'){
-        myObj['hello'] = 3;
-        
-    } else if (stringArray[i] === 'ram'){
-        myObj['ram'] = 7;
-       
-    } else if (stringArray[i] === 'shyam'){
-        myObj['shyam'] = 3;
-       
+        myObj[stringArray[i]] = 0; 
     }
+    
+    
+    myObj[stringArray[i]]++;
 }
 
 console.log(myObj);
